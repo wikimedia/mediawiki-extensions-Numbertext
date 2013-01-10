@@ -15,3 +15,17 @@ $messages = array();
 $messages['en'] = array(
 	'numbertext-desc' => 'Allows number to text conversion',
 );
+
+/** Message documentation (Message documentation)
+ * @author Raymond
+ */
+$messages['qqq'] = array(
+	'numbertext-desc' => '{{desc}}',
+);
+
+/** German (Deutsch)
+ * @author Metalhead64
+ */
+$messages['de'] = array(
+	'numbertext-desc' => 'Ermöglicht eine Zahl-zu-Text-Konvertierung',
+);
