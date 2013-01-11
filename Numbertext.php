@@ -20,7 +20,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits['parserhook'][] = array(
 	'path'           => __FILE__,
 	'name'           => 'Numbertext',
-	'version'        => '0.9.5.1',
+	'version'        => '0.9.5.2',
 	'url'            => 'https://www.mediawiki.org/wiki/Extension:Numbertext',
 	'author'         => array( '[[mw:User:Pastakhov|Pavel Astakhov]]', ),
 	'descriptionmsg' => 'numbertext-desc'

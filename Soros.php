@@ -251,7 +251,7 @@ class Soros {
  */
         $count = count($chars);
         for ($i=0; $i < $count; $i++) {
-            $s = str_replace($delim.$chars[$i], "".$chars2[$i], $s);
+            $s = str_replace($delim . $chars[$i], $chars2[$i], $s);
         }
         return $s;
     }
