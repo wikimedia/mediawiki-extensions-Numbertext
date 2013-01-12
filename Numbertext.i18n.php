@@ -65,3 +65,17 @@ $messages['ko'] = array(
 $messages['mk'] = array(
 	'numbertext-desc' => 'Овозможува претворање на бројки во текст',
 );
+
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
+$messages['nl'] = array(
+	'numbertext-desc' => 'Maakt het mogelijk getallen naar tekst om te zetten',
+);
+
+/** Piedmontese (Piemontèis)
+ * @author Dragonòt
+ */
+$messages['pms'] = array(
+	'numbertext-desc' => 'A përmëtt la conversion da nùmer a test',
+);
