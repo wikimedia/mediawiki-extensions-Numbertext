@@ -79,3 +79,10 @@ $messages['nl'] = array(
 $messages['pms'] = array(
 	'numbertext-desc' => 'A përmëtt la conversion da nùmer a test',
 );
+
+/** Yiddish (ייִדיש)
+ * @author פוילישער
+ */
+$messages['yi'] = array(
+	'numbertext-desc' => 'דערמעגלעכט נומער צו טעקסט קאנווערטירונג',
+);
