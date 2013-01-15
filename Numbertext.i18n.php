@@ -13,7 +13,7 @@ $messages = array();
  * @author Pavel Astakhov (pastakhov) <pastakhov@yandex.ru>
  */
 $messages['en'] = array(
-	'numbertext-desc' => 'Allows number to text conversion',
+	'numbertext-desc' => 'Allows to transform numbers into words',
 );
 
 /** Message documentation (Message documentation)
