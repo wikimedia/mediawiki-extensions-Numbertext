@@ -22,13 +22,13 @@ class Numbertext {
         return $modules;
     }
     
-    public static function getLangModule( $lang ) {
+    private static function getLangModule( $lang ) {
         $modules = self::getModules();
         if ( isset($modules[$lang]) ) return $modules[$lang];
         return null;
     }
     
-    public static function addModule ( $m ) {
+    private static function addModule ( $m ) {
         self::getModules($m);
     }
             
@@ -43,9 +43,11 @@ class Numbertext {
      * @param string $lang default 'en_US'
      * @return string
      */
-    public static function numbertext(&$parser, $input = '', $lang = 'en_US') {
-        $s = self::getLangModule($lang);
-        if ( is_null($s) ) $s = self::load($lang);
+    public static function numbertext(&$parser, $input = '', $lang = '') {
+        $fileLang = self::getLangFileName($lang);
+        
+        $s = self::getLangModule($fileLang);
+        if ( is_null($s) ) $s = self::load($fileLang);
         if ( is_null($s) ) return null;
         return $s->run($input);
     }
@@ -59,7 +61,29 @@ class Numbertext {
      * @param string $lang default 'en_US'
      * @return string
      */
-    public static function moneytext(&$parser, $input = '', $money = '', $lang = 'en_US') {
+    public static function moneytext(&$parser, $input = '', $money = '', $lang = '') {
         return self::numbertext($money . " " . $input, $lang);
+    }
+
+    private static function getLangFileName( $lang, $except = '' ) {
+        global $wgNumbertext_defaultLang, $wgNumbertextLang;
+
+        if ( $lang == '' ) {
+            if ( ($wgNumbertext_defaultLang == '' || is_null($wgNumbertext_defaultLang)) && $except == '' ) {
+                $lang = $GLOBALS['wgUser']->getOption('language');
+                $except = 'user';
+            } elseif ($except != 'content') {
+                $lang = $wgNumbertext_defaultLang;
+                $except = 'content';
+            } else {
+                return 'en_US';
+            }
+        }
+
+        if ( array_key_exists($lang, $wgNumbertextLang) ) return $lang;
+
+        $ret = array_search(strtolower($lang), $wgNumbertextLang);
+        if( $ret === false ) return self::getLangFileName('', $except);
+        return $ret;
     }
 }
