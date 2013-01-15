@@ -28,61 +28,68 @@ $messages['qqq'] = array(
  * @author Metalhead64
  */
 $messages['de'] = array(
-	'numbertext-desc' => 'Ermöglicht eine Zahl-zu-Text-Konvertierung',
+	'numbertext-desc' => 'Ermöglicht eine Zahl-zu-Text-Konvertierung', # Fuzzy
 );
 
 /** French (français)
  * @author Gomoko
  */
 $messages['fr'] = array(
-	'numbertext-desc' => 'Permet la conversion de nombre en texte',
+	'numbertext-desc' => 'Permet la conversion de nombre en texte', # Fuzzy
 );
 
 /** Galician (galego)
  * @author Toliño
  */
 $messages['gl'] = array(
-	'numbertext-desc' => 'Permite a conversión de números en texto',
+	'numbertext-desc' => 'Permite a conversión de números en texto', # Fuzzy
 );
 
 /** Japanese (日本語)
  * @author Shirayuki
  */
 $messages['ja'] = array(
-	'numbertext-desc' => '数値を文字列に変換できるようにする',
+	'numbertext-desc' => '数値を文字列に変換できるようにする', # Fuzzy
 );
 
 /** Korean (한국어)
  * @author 아라
  */
 $messages['ko'] = array(
-	'numbertext-desc' => '숫자를 텍스트로 변환을 허용',
+	'numbertext-desc' => '숫자를 텍스트로 변환을 허용', # Fuzzy
 );
 
 /** Macedonian (македонски)
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
-	'numbertext-desc' => 'Овозможува претворање на бројки во текст',
+	'numbertext-desc' => 'Овозможува претворање на бројки во текст', # Fuzzy
 );
 
 /** Dutch (Nederlands)
  * @author Siebrand
  */
 $messages['nl'] = array(
-	'numbertext-desc' => 'Maakt het mogelijk getallen naar tekst om te zetten',
+	'numbertext-desc' => 'Maakt het mogelijk getallen naar tekst om te zetten', # Fuzzy
 );
 
 /** Piedmontese (Piemontèis)
  * @author Dragonòt
  */
 $messages['pms'] = array(
-	'numbertext-desc' => 'A përmëtt la conversion da nùmer a test',
+	'numbertext-desc' => 'A përmëtt la conversion da nùmer a test', # Fuzzy
+);
+
+/** Ukrainian (українська)
+ * @author Ата
+ */
+$messages['uk'] = array(
+	'numbertext-desc' => 'Дозволяє конвертацію чисел в текст',
 );
 
 /** Yiddish (ייִדיש)
  * @author פוילישער
  */
 $messages['yi'] = array(
-	'numbertext-desc' => 'דערמעגלעכט נומער צו טעקסט קאנווערטירונג',
+	'numbertext-desc' => 'דערמעגלעכט נומער צו טעקסט קאנווערטירונג', # Fuzzy
 );
