@@ -82,8 +82,18 @@ class Numbertext {
 
         if ( array_key_exists($lang, $wgNumbertextLang) ) return $lang;
 
-        $ret = array_search(strtolower($lang), $wgNumbertextLang);
+        $ret = self::recursive_array_search( strtolower($lang), $wgNumbertextLang );
         if( $ret === false ) return self::getLangFileName('', $except);
         return $ret;
+    }
+
+    private static function recursive_array_search($needle, $haystack) {
+        foreach($haystack as $key=>$value) {
+            $current_key=$key;
+            if($needle===$value OR (is_array($value) && self::recursive_array_search($needle,$value) !== false)) {
+                return $current_key;
+            }
+        }
+        return false;
     }
 }
