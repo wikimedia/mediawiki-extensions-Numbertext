@@ -28,28 +28,28 @@ $messages['qqq'] = array(
  * @author Metalhead64
  */
 $messages['de'] = array(
-	'numbertext-desc' => 'Ermöglicht eine Zahl-zu-Text-Konvertierung', # Fuzzy
+	'numbertext-desc' => 'Ermöglicht eine Konvertierung von Zahlen in Text',
 );
 
 /** French (français)
  * @author Gomoko
  */
 $messages['fr'] = array(
-	'numbertext-desc' => 'Permet la conversion de nombre en texte', # Fuzzy
+	'numbertext-desc' => 'Permet de transformer des nombres en mots',
 );
 
 /** Galician (galego)
  * @author Toliño
  */
 $messages['gl'] = array(
-	'numbertext-desc' => 'Permite a conversión de números en texto', # Fuzzy
+	'numbertext-desc' => 'Permite transformar números en palabras',
 );
 
 /** Japanese (日本語)
  * @author Shirayuki
  */
 $messages['ja'] = array(
-	'numbertext-desc' => '数値を文字列に変換できるようにする', # Fuzzy
+	'numbertext-desc' => '数値を文字列に変換できるようにする',
 );
 
 /** Korean (한국어)
@@ -63,7 +63,7 @@ $messages['ko'] = array(
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
-	'numbertext-desc' => 'Овозможува претворање на бројки во текст', # Fuzzy
+	'numbertext-desc' => 'Овозможува претворање на бројки во зборови',
 );
 
 /** Dutch (Nederlands)
@@ -77,7 +77,14 @@ $messages['nl'] = array(
  * @author Dragonòt
  */
 $messages['pms'] = array(
-	'numbertext-desc' => 'A përmëtt la conversion da nùmer a test', # Fuzzy
+	'numbertext-desc' => 'A përmëtt ëd trasformé da nùmer an paròle',
+);
+
+/** Russian (русский)
+ * @author Pastakhov
+ */
+$messages['ru'] = array(
+	'numbertext-desc' => 'Позволяет писать числа прописью',
 );
 
 /** Ukrainian (українська)
