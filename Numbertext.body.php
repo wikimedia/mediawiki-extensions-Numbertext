@@ -62,7 +62,7 @@ class Numbertext {
      * @return string
      */
     public static function moneytext(&$parser, $input = '', $money = '', $lang = '') {
-        return self::numbertext($money . " " . $input, $lang);
+        return self::numbertext($parser, $money . " " . $input, $lang);
     }
 
     private static function getLangFileName( $lang, $except = '' ) {
