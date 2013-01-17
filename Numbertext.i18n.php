@@ -45,6 +45,13 @@ $messages['gl'] = array(
 	'numbertext-desc' => 'Permite transformar números en palabras',
 );
 
+/** Italian (italiano)
+ * @author Beta16
+ */
+$messages['it'] = array(
+	'numbertext-desc' => 'Consente di trasformare numeri in parole',
+);
+
 /** Japanese (日本語)
  * @author Shirayuki
  */
