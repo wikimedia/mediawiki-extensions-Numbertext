@@ -31,6 +31,13 @@ $messages['de'] = array(
 	'numbertext-desc' => 'Ermöglicht eine Konvertierung von Zahlen in Text',
 );
 
+/** Finnish (suomi)
+ * @author Veikk0.ma
+ */
+$messages['fi'] = array(
+	'numbertext-desc' => 'Mahdollistaa numeroiden muuntamisen sanoiksi',
+);
+
 /** French (français)
  * @author Gomoko
  */
@@ -106,4 +113,11 @@ $messages['uk'] = array(
  */
 $messages['yi'] = array(
 	'numbertext-desc' => 'דערמעגלעכט נומער צו טעקסט קאנווערטירונג', # Fuzzy
+);
+
+/** Simplified Chinese (中文（简体）‎)
+ * @author Yfdyh000
+ */
+$messages['zh-hans'] = array(
+	'numbertext-desc' => '允许转换数字到单词',
 );
