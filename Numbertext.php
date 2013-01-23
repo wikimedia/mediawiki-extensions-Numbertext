@@ -20,7 +20,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits['parserhook'][] = array(
 	'path'           => __FILE__,
 	'name'           => 'Numbertext',
-	'version'        => '0.9.5.5',
+	'version'        => '0.9.5.6',
 	'url'            => 'https://www.mediawiki.org/wiki/Extension:Numbertext',
 	'author'         => array( '[[mw:User:Pastakhov|Pavel Astakhov]]', ),
 	'descriptionmsg' => 'numbertext-desc'
@@ -38,23 +38,11 @@ $wgAutoloadClasses['Numbertext'] = $dir . '/Numbertext.body.php';
 $wgAutoloadClasses['Soros'] = $dir . '/Soros.php';
 
 // Specify the function that will initialize the parser function.
-$wgHooks['ParserFirstCallInit'][] = 'NumbertextSetupParserFunction';
-
-/** Tell MediaWiki that the parser function exists.
- *
- * @param Parser $parser
- * @return boolean
- */
-function NumbertextSetupParserFunction( &$parser ) {
-
-   // Create a function hook associating the "numbertext" and "moneytext" magic words with the
-   // Numbertext::numbertext() and umbertext::moneytext() functions.
+$wgHooks['ParserFirstCallInit'][] = function( Parser &$parser ) {
    $parser->setFunctionHook( 'MAG_NUMBERTEXT', 'Numbertext::numbertext' );
    $parser->setFunctionHook( 'MAG_MONEYTEXT', 'Numbertext::moneytext' );
-
-   // Return true so that MediaWiki continues to load extensions.
    return true;
-}
+};
 
 $wgNumbertext_defaultLang = $wgLanguageCode;
 
