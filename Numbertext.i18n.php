@@ -94,6 +94,13 @@ $messages['pms'] = array(
 	'numbertext-desc' => 'A përmëtt ëd trasformé da nùmer an paròle',
 );
 
+/** tarandíne (tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'numbertext-desc' => "Permette de trasformà numere jndr'à parole",
+);
+
 /** Russian (русский)
  * @author Pastakhov
  */
