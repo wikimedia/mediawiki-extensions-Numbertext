@@ -24,6 +24,13 @@ $messages['qqq'] = array(
 	'numbertext-desc' => '{{desc|name=Numbertext|url=http://www.numbertext.org/}}',
 );
 
+/** Asturian (asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'numbertext-desc' => 'Permite tresformar númberos en pallabres',
+);
+
 /** German (Deutsch)
  * @author Metalhead64
  */
