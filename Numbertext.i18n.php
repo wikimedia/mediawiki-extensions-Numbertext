@@ -38,6 +38,13 @@ $messages['de'] = array(
 	'numbertext-desc' => 'Ermöglicht eine Konvertierung von Zahlen in Text',
 );
 
+/** Spanish (español)
+ * @author Fitoschido
+ */
+$messages['es'] = array(
+	'numbertext-desc' => 'Permite transformar números en palabras',
+);
+
 /** Finnish (suomi)
  * @author Veikk0.ma
  */
