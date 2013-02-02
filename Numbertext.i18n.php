@@ -84,7 +84,7 @@ $messages['ja'] = array(
  * @author 아라
  */
 $messages['ko'] = array(
-	'numbertext-desc' => '숫자를 텍스트로 변환을 허용', # Fuzzy
+	'numbertext-desc' => '숫자를 텍스트로 변환할 수 있습니다',
 );
 
 /** Macedonian (македонски)
