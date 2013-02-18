@@ -66,6 +66,13 @@ $messages['gl'] = array(
 	'numbertext-desc' => 'Permite transformar números en palabras',
 );
 
+/** Upper Sorbian (hornjoserbsce)
+ * @author Michawiki
+ */
+$messages['hsb'] = array(
+	'numbertext-desc' => 'Zmóžnja konwertowanje ličbow do słowow',
+);
+
 /** Italian (italiano)
  * @author Beta16
  */
