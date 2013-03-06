@@ -45,6 +45,13 @@ $messages['es'] = array(
 	'numbertext-desc' => 'Permite transformar números en palabras',
 );
 
+/** Basque (euskara)
+ * @author Xabier Armendaritz
+ */
+$messages['eu'] = array(
+	'numbertext-desc' => 'Zenbakiak hitzetara bihurtzea ahalbidetzen du',
+);
+
 /** Finnish (suomi)
  * @author Veikk0.ma
  */
