@@ -101,6 +101,13 @@ $messages['ko'] = array(
 	'numbertext-desc' => '숫자를 텍스트로 변환할 수 있습니다',
 );
 
+/** Luxembourgish (Lëtzebuergesch)
+ * @author Robby
+ */
+$messages['lb'] = array(
+	'numbertext-desc' => 'Erlaabt et Zuelen a Wierder ëmzewandelen',
+);
+
 /** Macedonian (македонски)
  * @author Bjankuloski06
  */
