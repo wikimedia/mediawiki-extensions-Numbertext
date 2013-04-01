@@ -101,6 +101,13 @@ $messages['ko'] = array(
 	'numbertext-desc' => '숫자를 텍스트로 변환할 수 있습니다',
 );
 
+/** Colognian (Ripoarisch)
+ * @author Purodha
+ */
+$messages['ksh'] = array(
+	'numbertext-desc' => 'Määd et müjjelesch, Zahle en Wööter ömzesäze.',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
