@@ -161,7 +161,7 @@ $messages['uk'] = array(
  * @author פוילישער
  */
 $messages['yi'] = array(
-	'numbertext-desc' => 'דערמעגלעכט נומער צו טעקסט קאנווערטירונג', # Fuzzy
+	'numbertext-desc' => 'דערמעגלעכט פארוואנדלען נומערן צו ווערטער',
 );
 
 /** Simplified Chinese (中文（简体）‎)
