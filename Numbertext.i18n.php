@@ -126,7 +126,7 @@ $messages['mk'] = array(
  * @author Siebrand
  */
 $messages['nl'] = array(
-	'numbertext-desc' => 'Maakt het mogelijk getallen naar tekst om te zetten', # Fuzzy
+	'numbertext-desc' => 'Maakt het mogelijk getallen naar tekst om te zetten',
 );
 
 /** Piedmontese (Piemontèis)
