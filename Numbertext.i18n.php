@@ -170,3 +170,10 @@ $messages['yi'] = array(
 $messages['zh-hans'] = array(
 	'numbertext-desc' => '允许转换数字到单词',
 );
+
+/** Traditional Chinese (中文（繁體）‎)
+ * @author Justincheng12345
+ */
+$messages['zh-hant'] = array(
+	'numbertext-desc' => '容許將數字轉為文字',
+);
