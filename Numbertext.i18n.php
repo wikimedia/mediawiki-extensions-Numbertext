@@ -150,6 +150,13 @@ $messages['ru'] = array(
 	'numbertext-desc' => 'Позволяет писать числа прописью',
 );
 
+/** Swedish (svenska)
+ * @author Jopparn
+ */
+$messages['sv'] = array(
+	'numbertext-desc' => 'Gör det möjligt att omvandla nummer till ord',
+);
+
 /** Ukrainian (українська)
  * @author Ата
  */
