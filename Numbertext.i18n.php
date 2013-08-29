@@ -129,6 +129,13 @@ $messages['nl'] = array(
 	'numbertext-desc' => 'Maakt het mogelijk getallen naar tekst om te zetten',
 );
 
+/** Occitan (occitan)
+ * @author Cedric31
+ */
+$messages['oc'] = array(
+	'numbertext-desc' => 'Permet de transformar de nombres en mots',
+);
+
 /** Piedmontese (Piemontèis)
  * @author Dragonòt
  */
