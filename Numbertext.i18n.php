@@ -136,6 +136,13 @@ $messages['oc'] = array(
 	'numbertext-desc' => 'Permet de transformar de nombres en mots',
 );
 
+/** Polish (polski)
+ * @author Chrumps
+ */
+$messages['pl'] = array(
+	'numbertext-desc' => 'Pozwala na konwersję liczb na słowa',
+);
+
 /** Piedmontese (Piemontèis)
  * @author Dragonòt
  */
