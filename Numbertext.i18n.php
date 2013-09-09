@@ -150,6 +150,13 @@ $messages['pms'] = array(
 	'numbertext-desc' => 'A përmëtt ëd trasformé da nùmer an paròle',
 );
 
+/** Brazilian Portuguese (português do Brasil)
+ * @author Cainamarques
+ */
+$messages['pt-br'] = array(
+	'numbertext-desc' => 'Permite a transformação de números em palavras',
+);
+
 /** tarandíne (tarandíne)
  * @author Joetaras
  */
