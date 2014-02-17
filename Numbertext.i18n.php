@@ -52,6 +52,13 @@ $messages['eu'] = array(
 	'numbertext-desc' => 'Zenbakiak hitzetara bihurtzea ahalbidetzen du',
 );
 
+/** Persian (فارسی)
+ * @author Armin1392
+ */
+$messages['fa'] = array(
+	'numbertext-desc' => 'اجازهٔ تبدیل اعداد به کلمات',
+);
+
 /** Finnish (suomi)
  * @author Veikk0.ma
  */
