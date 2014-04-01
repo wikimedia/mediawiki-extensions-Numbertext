@@ -20,7 +20,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits['parserhook'][] = array(
 	'path'           => __FILE__,
 	'name'           => 'Numbertext',
-	'version'        => '0.9.5.6',
+	'version'        => '0.10.0.0',
 	'url'            => 'https://www.mediawiki.org/wiki/Extension:Numbertext',
 	'author'         => array( '[[mw:User:Pastakhov|Pavel Astakhov]]', ),
 	'descriptionmsg' => 'numbertext-desc'
@@ -30,6 +30,7 @@ $wgExtensionCredits['parserhook'][] = array(
 $dir = __DIR__;
 
 // Allow translations for this extension
+$wgMessagesDirs['Numbertext'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['Numbertext'] = $dir . '/Numbertext.i18n.php';
 $wgExtensionMessagesFiles['NumbertextMagic'] = $dir . '/Numbertext.i18n.magic.php';
 
