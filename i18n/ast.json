@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Xuacu"
-        ]
-    },
-    "numbertext-desc": "Permite tresformar númberos en pallabres"
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"numbertext-desc": "Permite tresformar númberos en pallabres"
 }

@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Siebrand"
-        ]
-    },
-    "numbertext-desc": "Maakt het mogelijk getallen naar tekst om te zetten"
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	},
+	"numbertext-desc": "Maakt het mogelijk getallen naar tekst om te zetten"
 }

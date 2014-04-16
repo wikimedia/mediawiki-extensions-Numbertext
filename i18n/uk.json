@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Ата"
-        ]
-    },
-    "numbertext-desc": "Дозволяє конвертацію чисел в текст"
+	"@metadata": {
+		"authors": [
+			"Ата"
+		]
+	},
+	"numbertext-desc": "Дозволяє конвертацію чисел в текст"
 }

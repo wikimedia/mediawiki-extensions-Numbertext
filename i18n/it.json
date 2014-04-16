@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Beta16"
-        ]
-    },
-    "numbertext-desc": "Consente di trasformare numeri in parole"
+	"@metadata": {
+		"authors": [
+			"Beta16"
+		]
+	},
+	"numbertext-desc": "Consente di trasformare numeri in parole"
 }

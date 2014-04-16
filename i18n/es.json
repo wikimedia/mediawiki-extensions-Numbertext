@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Fitoschido"
-        ]
-    },
-    "numbertext-desc": "Permite transformar números en palabras"
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"numbertext-desc": "Permite transformar números en palabras"
 }

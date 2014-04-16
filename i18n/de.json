@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Metalhead64"
-        ]
-    },
-    "numbertext-desc": "Ermöglicht eine Konvertierung von Zahlen in Text"
+	"@metadata": {
+		"authors": [
+			"Metalhead64"
+		]
+	},
+	"numbertext-desc": "Ermöglicht eine Konvertierung von Zahlen in Text"
 }
