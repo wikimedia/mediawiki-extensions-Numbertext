@@ -31,7 +31,6 @@ $dir = __DIR__;
 
 // Allow translations for this extension
 $wgMessagesDirs['Numbertext'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['Numbertext'] = $dir . '/Numbertext.i18n.php';
 $wgExtensionMessagesFiles['NumbertextMagic'] = $dir . '/Numbertext.i18n.magic.php';
 
 //Preparing classes for autoloading
