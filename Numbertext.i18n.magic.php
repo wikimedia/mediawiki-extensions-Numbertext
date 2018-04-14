@@ -7,13 +7,12 @@
  * @author Pavel Astakhov <pastakhov@yandex.ru>
  */
 
-$magicWords = array();
+$magicWords = [];
 
 /** English
  * @author Pavel Astakhov <pastakhov@yandex.ru>
  */
-$magicWords['en'] = array(
-    'MAG_NUMBERTEXT' => array( 0, 'numbertext' ),
-    'MAG_MONEYTEXT' => array( 0, 'moneytext'),
-);
-
+$magicWords['en'] = [
+	'MAG_NUMBERTEXT' => [ 0, 'numbertext' ],
+	'MAG_MONEYTEXT' => [ 0, 'moneytext' ],
+];

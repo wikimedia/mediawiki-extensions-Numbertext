@@ -4,96 +4,116 @@
  * Is based on the source code from http://numbertext.org/
  *
  * @author Pavel Astakhov <pastakhov@yandex.ru>
- * @licence LGPL/BSD dual-license
+ * @license LGPL/BSD dual-license
  */
 class Numbertext {
-    private static function load($lang) {
-        $url = __DIR__ . "/data/" . $lang . ".sor";
-        $st = file_get_contents($url);
-        if ($st === false) return null;
-        $s = new Soros($st);
-        if ($lang != null) self::addModule(array($lang, $s));
-        return $s;
-    }
-    
-    private static function getModules( $m = null ) {
-        static $modules = array();
-        if (is_array($m)) $modules[] = $m;
-        return $modules;
-    }
-    
-    private static function getLangModule( $lang ) {
-        $modules = self::getModules();
-        if ( isset($modules[$lang]) ) return $modules[$lang];
-        return null;
-    }
-    
-    private static function addModule ( $m ) {
-        self::getModules($m);
-    }
-            
+	private static function load( $lang ) {
+		$url = __DIR__ . "/data/" . $lang . ".sor";
+		$st = file_get_contents( $url );
+		if ( $st === false ) {
+			return null;
+		}
+		$s = new Soros( $st );
+		if ( $lang != null ) {
+			self::addModule( [ $lang, $s ] );
+		}
+		return $s;
+	}
 
-    public function __construct( ) { }
+	private static function getModules( $m = null ) {
+		static $modules = [];
+		if ( is_array( $m ) ) {
+			$modules[] = $m;
+		}
+		return $modules;
+	}
 
-    /**
-     * Number to text conversion
-     *
-     * @param Parser $parser
-     * @param string $input
-     * @param string $lang default 'en_US'
-     * @return string
-     */
-    public static function numbertext(&$parser, $input = '', $lang = '') {
-        $fileLang = self::getLangFileName($lang);
-        
-        $s = self::getLangModule($fileLang);
-        if ( is_null($s) ) $s = self::load($fileLang);
-        if ( is_null($s) ) return null;
-        return $s->run($input);
-    }
-    
-    /**
-     * Money to text conversion
-     *
-     * @param Parser $parser
-     * @param string $input
-     * @param string $money
-     * @param string $lang default 'en_US'
-     * @return string
-     */
-    public static function moneytext(&$parser, $input = '', $money = '', $lang = '') {
-        return self::numbertext($parser, $money . " " . $input, $lang);
-    }
+	private static function getLangModule( $lang ) {
+		$modules = self::getModules();
+		if ( isset( $modules[$lang] ) ) {
+			return $modules[$lang];
+		}
+		return null;
+	}
 
-    private static function getLangFileName( $lang, $except = '' ) {
-        global $wgNumbertext_defaultLang, $wgNumbertextLang;
+	private static function addModule( $m ) {
+		self::getModules( $m );
+	}
 
-        if ( $lang == '' ) {
-            if ( ($wgNumbertext_defaultLang == '' || is_null($wgNumbertext_defaultLang)) && $except == '' ) {
-                $lang = $GLOBALS['wgUser']->getOption('language');
-                $except = 'user';
-            } elseif ($except != 'content') {
-                $lang = $wgNumbertext_defaultLang;
-                $except = 'content';
-            } else {
-                return 'en_US';
-            }
-        }
+	public function __construct() {
+ }
 
-        if ( array_key_exists($lang, $wgNumbertextLang) ) return $lang;
+	/**
+	 * Number to text conversion
+	 *
+	 * @param Parser $parser
+	 * @param string $input
+	 * @param string $lang default 'en_US'
+	 * @return string
+	 */
+	public static function numbertext( &$parser, $input = '', $lang = '' ) {
+		$fileLang = self::getLangFileName( $lang );
 
-        $ret = self::recursive_array_search( strtolower($lang), $wgNumbertextLang );
-        if( $ret === false ) return self::getLangFileName('', $except);
-        return $ret;
-    }
+		$s = self::getLangModule( $fileLang );
+		if ( is_null( $s ) ) {
+			$s = self::load( $fileLang );
+		}
+		if ( is_null( $s ) ) {
+			return null;
+		}
+		return $s->run( $input );
+	}
 
-    private static function recursive_array_search($needle, $haystack) {
-        foreach($haystack as $key=>$value) {
-            $current_key=$key;
-            if($needle===$value OR (is_array($value) && self::recursive_array_search($needle,$value) !== false)) {
-                return $current_key;
-            }
-        }
-        return false;
-    }
+	/**
+	 * Money to text conversion
+	 *
+	 * @param Parser $parser
+	 * @param string $input
+	 * @param string $money
+	 * @param string $lang default 'en_US'
+	 * @return string
+	 */
+	public static function moneytext( &$parser, $input = '', $money = '', $lang = '' ) {
+		return self::numbertext( $parser, $money . " " . $input, $lang );
+	}
+
+	private static function getLangFileName( $lang, $except = '' ) {
+		global $wgNumbertext_defaultLang, $wgNumbertextLang;
+
+		if ( $lang == '' ) {
+			if ( ( $wgNumbertext_defaultLang == '' || is_null( $wgNumbertext_defaultLang ) )
+				&& $except == ''
+			) {
+				$lang = $GLOBALS['wgUser']->getOption( 'language' );
+				$except = 'user';
+			} elseif ( $except != 'content' ) {
+				$lang = $wgNumbertext_defaultLang;
+				$except = 'content';
+			} else {
+				return 'en_US';
+			}
+		}
+
+		if ( array_key_exists( $lang, $wgNumbertextLang ) ) {
+			return $lang;
+		}
+
+		$ret = self::recursive_array_search( strtolower( $lang ), $wgNumbertextLang );
+		if ( $ret === false ) {
+			return self::getLangFileName( '', $except );
+		}
+		return $ret;
+	}
+
+	private static function recursive_array_search( $needle, $haystack ) {
+		foreach ( $haystack as $key => $value ) {
+			$current_key = $key;
+			if ( $needle === $value or ( is_array( $value )
+				&& self::recursive_array_search( $needle, $value ) !== false )
+			) {
+				return $current_key;
+			}
+		}
+		return false;
+	}
 }
