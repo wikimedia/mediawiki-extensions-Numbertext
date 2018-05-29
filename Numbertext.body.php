@@ -108,8 +108,9 @@ class Numbertext {
 	private static function recursive_array_search( $needle, $haystack ) {
 		foreach ( $haystack as $key => $value ) {
 			$current_key = $key;
-			if ( $needle === $value or ( is_array( $value )
-				&& self::recursive_array_search( $needle, $value ) !== false )
+			if (
+				$needle === $value ||
+				( is_array( $value ) && self::recursive_array_search( $needle, $value ) !== false )
 			) {
 				return $current_key;
 			}
