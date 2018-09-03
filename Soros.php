@@ -56,7 +56,7 @@ class Soros {
 				$s2 = self::translate( $s2, $this->c2, $this->m2, "" );
 
 				$s2 = preg_replace( "/[$]/", "\\$", $s2 ); // $ -> \$
-				$s2 = preg_replace( "/".$this->c[0]."(\\d)/", $this->c[0].$this->c[1]."\\$$1".$this->c[2], $s2 ); // $n -> $(\n)
+				$s2 = preg_replace( "/" . $this->c[0] . "(\\d)/", $this->c[0] . $this->c[1] . "\\$$1" . $this->c[2], $s2 ); // $n -> $(\n)
 				$s2 = preg_replace( "/\\\\(\\d)/", "\\$$1", $s2 ); // \[n] -> $[n]
 				$s2 = preg_replace( "/\\n/", "\n", $s2 ); // \n -> [new line]
 
@@ -100,12 +100,12 @@ class Soros {
 			if ( ( !$begin && $this->begins[$i] ) || ( !$end && $this->ends[$i] ) ) {
 				continue;
 			}
-			if ( !preg_match( "/".$this->patterns[$i]."/", $input, $m ) ) {
+			if ( !preg_match( "/" . $this->patterns[$i] . "/", $input, $m ) ) {
 				continue;
 			}
 
-			$s = preg_replace( "/".$this->patterns[$i]."/", $this->values[$i],  $m[0] );
-			preg_match_all( "/".$this->func."/u", $s, $n, PREG_OFFSET_CAPTURE );
+			$s = preg_replace( "/" . $this->patterns[$i] . "/", $this->values[$i],  $m[0] );
+			preg_match_all( "/" . $this->func . "/u", $s, $n, PREG_OFFSET_CAPTURE );
 			while ( count( $n[0] ) > 0 ) {
 				// n.start()            n.group()            n.start(1)           n.group(1)           n.start(2)           n.group(2)
 				// MWDebug::log( $n[0][0][1] . "=>" . $n[0][0][0] . ", " . $n[1][0][1] . "=>" . $n[1][0][0] . ", " . $n[2][0][1] . "=>" . $n[2][0][0] );
