@@ -55,10 +55,10 @@ class Numbertext {
 		$fileLang = self::getLangFileName( $lang );
 
 		$s = self::getLangModule( $fileLang );
-		if ( is_null( $s ) ) {
+		if ( $s === null ) {
 			$s = self::load( $fileLang );
 		}
-		if ( is_null( $s ) ) {
+		if ( $s === null ) {
 			return null;
 		}
 		return $s->run( $input );
@@ -81,7 +81,7 @@ class Numbertext {
 		global $wgNumbertext_defaultLang, $wgNumbertextLang;
 
 		if ( $lang == '' ) {
-			if ( ( $wgNumbertext_defaultLang == '' || is_null( $wgNumbertext_defaultLang ) )
+			if ( ( $wgNumbertext_defaultLang == '' || $wgNumbertext_defaultLang === null )
 				&& $except == ''
 			) {
 				$lang = $GLOBALS['wgUser']->getOption( 'language' );
