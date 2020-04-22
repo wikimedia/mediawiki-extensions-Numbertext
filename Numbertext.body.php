@@ -46,7 +46,7 @@ class Numbertext {
 	/**
 	 * Number to text conversion
 	 *
-	 * @param Parser $parser
+	 * @param Parser &$parser
 	 * @param string $input
 	 * @param string $lang default 'en_US'
 	 * @return string
@@ -67,7 +67,7 @@ class Numbertext {
 	/**
 	 * Money to text conversion
 	 *
-	 * @param Parser $parser
+	 * @param Parser &$parser
 	 * @param string $input
 	 * @param string $money
 	 * @param string $lang default 'en_US'
