@@ -41,7 +41,7 @@ class Numbertext {
 	}
 
 	public function __construct() {
- }
+	}
 
 	/**
 	 * Number to text conversion
