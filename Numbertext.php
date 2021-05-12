@@ -38,7 +38,7 @@ $wgAutoloadClasses['Numbertext'] = $dir . '/Numbertext.body.php';
 $wgAutoloadClasses['Soros'] = $dir . '/Soros.php';
 
 // Specify the function that will initialize the parser function.
-$wgHooks['ParserFirstCallInit'][] = function ( Parser &$parser ) {
+$wgHooks['ParserFirstCallInit'][] = static function ( Parser &$parser ) {
 	$parser->setFunctionHook( 'MAG_NUMBERTEXT', 'Numbertext::numbertext' );
 	$parser->setFunctionHook( 'MAG_MONEYTEXT', 'Numbertext::moneytext' );
 	return true;
