@@ -10,8 +10,9 @@
 		<exclude name="MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName" />
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment" />
 		<exclude name="Squiz.Operators.ValidLogicalOperators.NotAllowed" />
+		<exclude name="Squiz.WhiteSpace.ScopeClosingBrace.Indent" />
 	</rule>
 	<file>.</file>
-	<arg name="extensions" value="php,php5,inc"/>
+	<arg name="extensions" value="php"/>
 	<arg name="encoding" value="UTF-8"/>
 </ruleset>
