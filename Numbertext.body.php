@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * Main classes used by the Numbertext extension.
  * Is based on the source code from http://numbertext.org/
@@ -84,7 +87,8 @@ class Numbertext {
 			if ( ( $wgNumbertext_defaultLang == '' || $wgNumbertext_defaultLang === null )
 				&& $except == ''
 			) {
-				$lang = $GLOBALS['wgUser']->getOption( 'language' );
+				$lang = MediaWikiServices::getInstance()->getUserOptionsLookup()
+					->getOption( RequestContext::getMain()->getUser(), 'language' );
 				$except = 'user';
 			} elseif ( $except != 'content' ) {
 				$lang = $wgNumbertext_defaultLang;
