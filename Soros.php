@@ -104,7 +104,7 @@ class Soros {
 				continue;
 			}
 
-			$s = preg_replace( "/" . $this->patterns[$i] . "/", $this->values[$i],  $m[0] );
+			$s = preg_replace( "/" . $this->patterns[$i] . "/", $this->values[$i], $m[0] );
 			preg_match_all( "/" . $this->func . "/u", $s, $n, PREG_OFFSET_CAPTURE );
 			while ( count( $n[0] ) > 0 ) {
 				// n.start()            n.group()            n.start(1)           n.group(1)           n.start(2)           n.group(2)
