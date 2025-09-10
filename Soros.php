@@ -76,7 +76,6 @@ class Soros {
 	}
 
 	/**
-	 *
 	 * @param string $input
 	 * @return string
 	 */
@@ -88,7 +87,6 @@ class Soros {
 	}
 
 	/**
-	 *
 	 * @param string $input
 	 * @param string $begin
 	 * @param string $end
@@ -133,7 +131,6 @@ class Soros {
 	}
 
 	/**
-	 *
 	 * @param string $s
 	 * @param string $chars
 	 * @param string $chars2
